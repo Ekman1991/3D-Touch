@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ForceTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erY-qN-yo8">
+                                <rect key="frame" x="104" y="255" width="113" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="qql-Ej-x4n"/>
+                                    <constraint firstAttribute="height" constant="57" id="tlL-Ce-FbG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Peek"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="erY-qN-yo8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BUO-Hw-VpN"/>
+                            <constraint firstItem="erY-qN-yo8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MOq-Qw-LfA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dRX-g4-9Pa"/>
+                    <connections>
+                        <outlet property="peekButton" destination="erY-qN-yo8" id="Ygz-5a-6d9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="321"/>
+        </scene>
+        <!--Pop View Controller-->
+        <scene sceneID="Olm-i2-D1h">
+            <objects>
+                <viewController storyboardIdentifier="PopViewController" id="vRJ-KR-SIm" customClass="PopViewController" customModule="ForceTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kwP-TS-Lj0"/>
+                        <viewControllerLayoutGuide type="bottom" id="O8y-aY-xb4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="48g-rt-oZy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The PopView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUY-Sn-Kfc">
+                                <rect key="frame" x="76" y="28" width="169" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="gfc-Zc-61s"/>
+                                    <constraint firstAttribute="height" constant="48" id="rZu-Z4-Gqn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gE-Hs-Km5">
+                                <rect key="frame" x="119" y="478" width="83" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ssh-fA-hKv"/>
+                                    <constraint firstAttribute="width" constant="83" id="tRL-xh-1Hn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="aMD-eR-OqM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ForceTouch to make bubble" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o55-Cy-A3y">
+                                <rect key="frame" x="54" y="273" width="212" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jWM-Vh-GsM"/>
+                                    <constraint firstAttribute="width" constant="212" id="lx4-1Y-C2n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GUY-Sn-Kfc" firstAttribute="top" secondItem="kwP-TS-Lj0" secondAttribute="bottom" constant="8" id="Ga0-o9-QIk"/>
+                            <constraint firstItem="O8y-aY-xb4" firstAttribute="top" secondItem="4gE-Hs-Km5" secondAttribute="bottom" constant="51" id="R8B-jp-jQg"/>
+                            <constraint firstItem="4gE-Hs-Km5" firstAttribute="centerX" secondItem="48g-rt-oZy" secondAttribute="centerX" id="XF9-zn-rNl"/>
+                            <constraint firstItem="GUY-Sn-Kfc" firstAttribute="centerX" secondItem="48g-rt-oZy" secondAttribute="centerX" id="lqs-ar-k53"/>
+                            <constraint firstItem="o55-Cy-A3y" firstAttribute="centerY" secondItem="48g-rt-oZy" secondAttribute="centerY" id="pNi-7j-lSm"/>
+                            <constraint firstItem="o55-Cy-A3y" firstAttribute="centerX" secondItem="48g-rt-oZy" secondAttribute="centerX" id="xZd-15-qap"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vt-iC-fZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="321"/>
+        </scene>
+    </scenes>
+</document>
